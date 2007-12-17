@@ -17,7 +17,6 @@ Buildrequires:  perl-devel
 BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Tree::Simple)
 BuildArch:      noarch
-Buildroot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This implements a recursive multi-level sort of a Tree::Simple hierarchy.
