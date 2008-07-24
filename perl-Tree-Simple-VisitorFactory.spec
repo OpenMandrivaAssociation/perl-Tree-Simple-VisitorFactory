@@ -1,7 +1,7 @@
 %define module Tree-Simple-VisitorFactory
 %define name perl-%{module}
 %define version 0.10
-%define release %mkrel 4
+%define release %mkrel 6
 
 Name:           %{name}
 Version:        %{version}
