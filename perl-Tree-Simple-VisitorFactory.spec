@@ -11,13 +11,10 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Tree/%{upstream_name}-%{upstream_version}.tar.bz2
 
-%if %{mdkversion} < 1010
-Buildrequires:  perl-devel
-%endif
+BuildRequires:  perl-devel
 BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Tree::Simple)
 BuildArch:      noarch
-Buildroot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This implements a recursive multi-level sort of a Tree::Simple hierarchy.
@@ -33,14 +30,54 @@ This implements a recursive multi-level sort of a Tree::Simple hierarchy.
 %{__make} test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc README Changes
 %{perl_vendorlib}/Tree
 %{_mandir}/*/*
 
-%clean
-rm -rf %{buildroot}
+%changelog
+* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.100.0-1mdv2010.0
++ Revision: 405769
+- rebuild using %%perl_convert_version
+
+* Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.10-7mdv2009.0
++ Revision: 258707
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.10-6mdv2009.0
++ Revision: 246666
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 0.10-4mdv2008.1
++ Revision: 136364
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sat Sep 15 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.10-4mdv2008.0
++ Revision: 87063
+- rebuild
+
+
+* Tue Aug 29 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.10-3mdv2007.0
+- Rebuild
+
+* Mon Apr 03 2006 Buchan Milne <bgmilne@mandriva.org> 0.10-2mdk
+- Rebuild
+- use mkrel
+
+* Wed Dec 14 2005 Guillaume Rousse <guillomovitch@mandriva.org> 0.10-1mdk
+- New release 0.10
+
+* Wed Sep 21 2005 Guillaume Rousse <guillomovitch@mandriva.org> 0.07-1mdk
+- new version 
+- rpmbuildupdate aware
+- fix directory ownership
+- make test in %%check
+
+* Tue May 03 2005 Rafael Garcia-Suarez <rgarciasuarez@mandriva.com> 0.05-1mdk
+- First Mandriva release
+
