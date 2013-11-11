@@ -1,15 +1,15 @@
 %define upstream_name    Tree-Simple-VisitorFactory
-%define upstream_version 0.10
+%define upstream_version 0.12
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    1
 
 Summary:    A Visitor for sorting a Tree::Simple object hierarchy
 License:    Artistic/GPL
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Tree/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/Tree/Tree-Simple-VisitorFactory-%{upstream_version}.tgz
 
 BuildRequires:  perl-devel
 BuildRequires:  perl(Test::Exception)
@@ -80,4 +80,5 @@ This implements a recursive multi-level sort of a Tree::Simple hierarchy.
 
 * Tue May 03 2005 Rafael Garcia-Suarez <rgarciasuarez@mandriva.com> 0.05-1mdk
 - First Mandriva release
+
 
