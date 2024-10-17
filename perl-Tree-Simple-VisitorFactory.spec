@@ -8,7 +8,7 @@ Release:    3
 Summary:    A Visitor for sorting a Tree::Simple object hierarchy
 License:    Artistic/GPL
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
+Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Tree/Tree-Simple-VisitorFactory-%{upstream_version}.tgz
 
 BuildRequires:  perl-devel
