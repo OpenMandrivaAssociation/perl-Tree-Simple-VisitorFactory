@@ -11,6 +11,7 @@ Group:      Development/Perl
 Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Tree/Tree-Simple-VisitorFactory-%{upstream_version}.tgz
 
+BuildRequires:	make
 BuildRequires:  perl-devel
 BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Tree::Simple)
